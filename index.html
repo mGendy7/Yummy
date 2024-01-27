@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Yummy</title>
+    <link rel="icon" href="logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <!-- Animated Background -->
+    <div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
+    <!-- =================== -->
+    <div class="container-fluid">
+      <nav class="min-vh-100 close">
+        <div class="row">
+          <div
+            class="col-9 min-vh-100 px-4 py-4 d-flex flex-column justify-content-between"
+            id="half-one"
+          >
+            <ul class="px-3" id="nav-list">
+              <li class="active" data-set="#categories">Categories</li>
+              <li data-set="#search" class="my-3">Search</li>
+              <li data-set="#area" class="my-3">Area</li>
+              <li class="my-3" data-set="#ingredients">Ingredients</li>
+              <li data-set="#contact">Contact us</li>
+            </ul>
+            <div class="nav-footer">
+              <ul class="d-flex">
+                <li>
+                  <a href=""><i class="fa-brands fa-facebook"></i></a>
+                </li>
+                <li class="mx-2">
+                  <a href=""><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fa-brands fa-twitter"></i></a>
+                </li>
+              </ul>
+              <p class="text-white">Copyright Â© 2019 All Rights Reserved.</p>
+            </div>
+          </div>
+          <div
+            class="col-3 bg-light min-vh-100 d-flex justify-content-between flex-column align-items-center py-3"
+          >
+            <img class="w-100" src="logo.png" alt="" />
+            <div class="toggle-btn">
+              <i class="fa-solid fa-bars fa-2x" id="openSidebar"></i>
+            </div>
+            <ul>
+              <li>
+                <a href=""><i class="fa-solid fa-globe"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fa-solid fa-wifi"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="main-sections">
+        <div class="container">
+          <!-- categories Section -->
+          <section id="categories" class="position-relative">
+            <div class="row py-5 gy-5 text-white"></div>
+          </section>
+          <!-- Search Section -->
+          <section id="search" class="">
+            <div class="row py-5 gy-3">
+              <div class="col-md-6">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Search By Name"
+                />
+              </div>
+              <div class="col-md-6">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Search By First Letter"
+                />
+              </div>
+            </div>
+            <div class="row py-5 gy-5 search-row"></div>
+          </section>
+          <!-- Area Section -->
+          <section id="area" class="">
+            <div class="row py-5 gy-5"></div>
+          </section>
+          <!-- Ingredients Section -->
+          <section id="ingredients" class="">
+            <div class="row py-5 gy-5"></div>
+          </section>
+          <!-- Contact Section -->
+          <section id="contact" class="">
+            <div class="container">
+              <form class="mt-5">
+                <div class="row py-5 gy-5">
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Your Name"
+                      id="name"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Enter Your Email"
+                      id="email"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="number"
+                      class="form-control"
+                      placeholder="Enter Your Phone"
+                      id="phone"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="number"
+                      class="form-control"
+                      placeholder="Enter Your Age"
+                      id="age"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="password"
+                      class="form-control"
+                      placeholder="Enter Your Password"
+                      id="password"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="password"
+                      class="form-control"
+                      placeholder="Repassword"
+                      id="repassword"
+                    />
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <button class="btn btn-danger" id="submit-btn">Submit</button>
+                </div>
+              </form>
+            </div>
+          </section>
+          <div
+            id="loading"
+            class="d-flex justify-content-center align-items-center vh-100 d-none"
+          >
+            <p class="h1 text-white">Loading...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/Area.js"></script>
+    <script src="js/Ingredients.js"></script>
+    <script src="js/Contact.js"></script>
+    <script src="js/Search.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
